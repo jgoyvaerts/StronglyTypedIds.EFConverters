@@ -89,7 +89,7 @@ namespace StronglyTypedIds.EFConverters
 
     private string GenerateEfCoreValueConverter(string namespaceName, string structName, string structType)
     {
-        return $@"
+        return $@"#nullable enable
 using System;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using {namespaceName};
