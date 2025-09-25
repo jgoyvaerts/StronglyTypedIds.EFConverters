@@ -69,7 +69,8 @@ public class EfCoreValueConverterGenerator : ISourceGenerator
         var usingStatements = uniqueNameSpaces.Count > 0
             ? string.Join("\r\n", uniqueNameSpaces.Select(ns => $"using {ns};"))
             : string.Empty;
-        return $@"using System;
+        return $@"#nullable enable
+using System;
 using Microsoft.EntityFrameworkCore;
 {usingStatements}
 
